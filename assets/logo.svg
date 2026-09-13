@@ -1,0 +1,8 @@
+<svg width="184" height="32" viewBox="0 0 184 32" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 27 L11 15 L16 21 L23 7" stroke="#7FB2E5" stroke-width="3.4"/>
+    <path d="M23 7 L23 13.5 M23 7 L16.5 8" stroke="#7FB2E5" stroke-width="3.4"/>
+    <path d="M5 27 L11 15" stroke="#C1272D" stroke-width="3.4"/>
+  </g>
+  <text x="34" y="22" font-family="'Space Grotesk', Arial, sans-serif" font-size="18" font-weight="600" fill="#EFF3F7" letter-spacing="0.2">Acxel Solutions</text>
+</svg>
