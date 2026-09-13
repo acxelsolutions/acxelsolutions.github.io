@@ -39,12 +39,30 @@ tags in `index.html`. Everything else is plain HTML/CSS.
 6. GitHub will publish it at `https://<your-username>.github.io/<repo-name>/`
    within a minute or two.
 
+## Set up the contact form (Formspree)
+
+The form now posts to Formspree instead of using a `mailto:` link, which
+avoids the "this connection isn't secure" browser warning and doesn't
+depend on the visitor having an email client configured.
+
+1. Go to [formspree.io](https://formspree.io) and create a free account.
+2. Create a new form and copy the form ID it gives you (looks like
+   `https://formspree.io/f/xyzabcde`).
+3. In `index.html`, find the `<form>` tag and replace `YOUR_FORM_ID` in
+   `action="https://formspree.io/f/YOUR_FORM_ID"` with your real ID.
+4. Optionally update the `_next` hidden field to wherever you want visitors
+   redirected after submitting (defaults to the site's own contact page).
+5. Submit a test message from the live site — it'll show up in your
+   Formspree dashboard and get emailed to whichever address you configured
+   there. Formspree's free plan includes 50 submissions/month.
+
+The hidden `_gotcha` field is a basic honeypot Formspree uses to filter out
+spam bots — leave it in place, just don't remove `display:none` from it.
+
 ## Before you launch for real
 
-- The contact form currently submits via `mailto:` (opens the visitor's email
-  client) — fine for a demo, but replace `action="mailto:..."` in
-  `index.html` with a real backend or a form service (Formspree, Getform,
-  Netlify Forms, etc.) for production use.
+- Finish the Formspree setup above (the form won't send anywhere until you
+  swap in your real form ID).
 - Swap the placeholder name, address, phone, email, and partner names for
   your own.
 - Replace `assets/map.svg` with a real embedded map (e.g. a Google Maps

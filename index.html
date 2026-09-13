@@ -44,7 +44,7 @@
         </li>
         <li>
           <span class="k">Email</span>
-          <a href="mailto:sales@acxelsolutions.com">sales@acxelsolutions.com</a>
+          <a href="mailto:hello@acxelsolutions.example">hello@acxelsolutions.example</a>
         </li>
         <li>
           <span class="k">Office</span>
@@ -61,7 +61,19 @@
       <h2>Send us a message</h2>
       <p class="lede">Fill in a few details and pick the reason you're reaching out. We'll route it to the right team straight away.</p>
 
-      <form action="mailto:sales@acxelsolutions.com" method="post" enctype="text/plain">
+      <!--
+        Formspree setup:
+        1. Create a free form at https://formspree.io and copy your form ID.
+        2. Replace YOUR_FORM_ID below with that ID.
+        3. That's it — submissions will be emailed to the address you set up
+           in your Formspree dashboard, and visitors get redirected back here
+           with a "Thanks" message (see the _next field below).
+      -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="New enquiry from acxelsolutions.com">
+        <input type="hidden" name="_next" value="https://acxelsys.github.io/#sent">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
         <div class="field-row">
           <div class="field">
             <label for="first-name">First name</label>
@@ -101,7 +113,7 @@
         </div>
 
         <button class="btn" type="submit">Send message</button>
-        <p class="field-note">This form opens your email client. Swap the form action for your own backend or a service like Formspree before you launch.</p>
+        <p class="field-note">Submissions are sent securely through Formspree — no email client pop-up, no browser warning.</p>
       </form>
     </div>
 
@@ -163,8 +175,8 @@
         <h4>Get in touch</h4>
         <ul>
           <li><a href="tel:+18005551029">+1 (800) 555-1029</a></li>
-          <li><a href="mailto:sales@acxelsolutions.com">sales@acxelsolutions.com</a></li>
-          <li><a href="https://www.google.com/maps" target="_blank" rel="noopener">Washington DC</a></li>
+          <li><a href="mailto:hello@acxelsolutions.example">hello@acxelsolutions.example</a></li>
+          <li><a href="https://www.google.com/maps" target="_blank" rel="noopener">412 Riverside Row, Austin, TX</a></li>
         </ul>
       </div>
     </div>
